@@ -108,7 +108,7 @@ meaning WebSocket 1 sends audio only to PSTN 2 leg,</br>
 the array parameter *canHear* that lists PSTN 1 leg uuid,</br>
 meaning WebSocket 1 receives audio only from PSTN 1  leg.</br>
 
-In step 7, regarding WebSocket 2 leg,</br>
+In step 8, regarding WebSocket 2 leg,</br>
 the NCCO with action conversation includes the array parameter *canSpeak* that lists PSTN 1 leg uuid,</br>
 meaning WebSocket 2 sends audio only to PSTN 1 leg,</br>
 the array parameter *canHear* that lists PSTN 2 leg uuid,</br>
