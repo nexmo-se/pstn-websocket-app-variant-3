@@ -116,7 +116,7 @@ meaning WebSocket 2 receives audio only from PSTN 2  leg.</br>
 
 
 
-In steps 6 and 7, both NCCOs with action conversation include endOnExit true flag because if either PSTN 1 or PSTN 2 remote party ends the call, then all legs attached to the same conference should be terminated.</br>
+In steps 5 and 6, both NCCOs with action conversation include endOnExit true flag because if either PSTN 1 or PSTN 2 remote party ends the call, then all legs attached to the same conference should be terminated.</br>
 
 In step 2, the NCCO with action conversation does not include endOnExit true flag because it may automatically terminate all legs which is an undesired behavior.</br>
 
