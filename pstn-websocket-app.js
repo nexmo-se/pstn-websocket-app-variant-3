@@ -109,6 +109,9 @@ function deleteFromUuids(originalUuid) {
 
 //-- Trigger outbound PSTN calls - see sample request below
 //-- Sample request: https://<server-address/startcall?pstn1=12995551212&pstn2=12995551313&param1=en-US&param2=es-MX
+//-- or
+//-- Sample request: https://<server-address/startcall  (to use default parameters from .env file)
+
 app.get('/startcall', (req, res) => {
 
   res.status(200).send('Ok');
@@ -140,6 +143,11 @@ app.get('/startcall', (req, res) => {
       type: 'phone',
       number: callee1
     },
+    // advanced_machine_detection: {
+    //   "mode": "default",
+    //   "behavior": "continue",
+    //   "beep_timeout": 45
+    // },
     answer_url: ['https://' + hostName + '/ws_answer_1?callee1=' + callee1 + '&callee2=' + callee2 + '&attribute1=' + attribute1 + '&attribute2=' + attribute2],
     answer_method: 'GET',
     event_url: ['https://' + hostName + '/ws_event_1?callee1=' + callee1 + '&callee2=' + callee2 + '&attribute1=' + attribute1 + '&attribute2=' + attribute2],
@@ -153,7 +161,6 @@ app.get('/startcall', (req, res) => {
     .catch(err => console.error(">>> WebSocket 1 create error:", err));
  
 });
-
 
 //--------------
 
